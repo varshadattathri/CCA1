@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud AI Resume Ranker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h2>☁ Cloud AI Resume Ranker</h2>
+    </div>
+
+    <!-- THEME BUTTON -->
+    <button id="themeBtn" class="theme-btn">
+        🌙 Toggle Theme
+    </button>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <h1>Intelligent Career Platform</h1>
+
+        <!-- CLOUD PANEL -->
+        <div class="cloud-panel">
+
+            <h3>☁ Cloud Processing Dashboard</h3>
+
+            <div class="cloud-stats">
+
+                <div class="cloud-box">
+                    <span>3</span>
+                    <p>Virtual Machines</p>
+                </div>
+
+                <div class="cloud-box">
+                    <span id="taskCount">0</span>
+                    <p>Cloud Tasks</p>
+                </div>
+
+                <div class="cloud-box">
+                    <span>12ms</span>
+                    <p>Latency</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- JD -->
+        <label>Job Description:</label>
+        <textarea id="jd"></textarea>
+
+        <!-- IMPORTANT KEYWORDS -->
+        <label>Important Keywords:</label>
+        <textarea id="important"></textarea>
+
+        <!-- OPTIONS -->
+        <div class="toggles">
+
+            <label>
+                <input type="checkbox" id="removeStopwords" checked>
+                Remove Stopwords
+            </label>
+
+            <label>
+                <input type="checkbox" id="ignoreCase" checked>
+                Ignore Case
+            </label>
+
+            <label>
+                <input type="checkbox" id="removeNumbers">
+                Remove Numbers
+            </label>
+
+        </div>
+
+        <!-- RESUMES -->
+        <label>Resume 1:</label>
+        <textarea id="r1"></textarea>
+
+        <label>Resume 2:</label>
+        <textarea id="r2"></textarea>
+
+        <label>Resume 3:</label>
+        <textarea id="r3"></textarea>
+
+        <button onclick="rank()">
+            Analyze & Rank Resumes
+        </button>
+
+        <!-- RESULTS -->
+        <div id="result" class="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
